@@ -50,16 +50,36 @@ public class MainActivity extends AppCompatActivity {
 
                                 }
                             });
-
-
-
-
                     builder.show();
                 }
             });
+        setContentView(R.layout.activity_main);
 
+        Button btn = (Button) this.findViewById(R.id.But_title);
+        btn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("用户名：abc 密码：123")//显示的消息内容
+                        .setTitle("对话框");//对话框标题
+
+                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(MainActivity.this, "用户按下了确认按钮", Toast.LENGTH_LONG).show();
+
+                    }
+                });
+
+                builder.show();
+            }
+        });
 
 
         }
-    }
+
+
+}
 
