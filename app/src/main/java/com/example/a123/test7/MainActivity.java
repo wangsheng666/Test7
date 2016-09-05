@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_main);
 
 
-
             Button button = (Button) findViewById(R.id.But_login);
 
             button.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     builder.show();
                 }
             });
-        setContentView(R.layout.activity_main);
+
 
         Button btn = (Button) this.findViewById(R.id.But_title);
         btn.setOnClickListener(new View.OnClickListener() {
